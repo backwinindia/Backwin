@@ -1,0 +1,72 @@
+.counter-section{
+    background:#fff;
+    padding:90px 0;
+}
+
+.counter-container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+}
+
+.counter-card{
+
+    background:#ffffff;
+
+    text-align:center;
+
+    padding:45px 20px;
+
+    border-radius:15px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    transition:.3s;
+}
+
+.counter-card:hover{
+
+    transform:translateY(-8px);
+}
+
+.counter-card h2{
+
+    color:#d90000;
+
+    font-size:3rem;
+
+    margin-bottom:15px;
+}
+
+.counter-card p{
+
+    color:#555;
+
+    font-size:1rem;
+
+    font-weight:500;
+}
+
+@media(max-width:900px){
+
+.counter-container{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:600px){
+
+.counter-container{
+
+grid-template-columns:1fr;
+
+}
+
+}

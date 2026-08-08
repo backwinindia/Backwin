@@ -1,0 +1,380 @@
+/* ==========================================
+   Global Presence
+========================================== */
+
+.global-presence{
+    padding:100px 6%;
+    background:#fff;
+}
+
+/* ==========================================
+   Heading
+========================================== */
+
+.global-heading{
+    max-width:760px;
+    margin:0 auto 70px;
+    text-align:center;
+}
+
+.global-heading span{
+    display:inline-block;
+    color:#d62828;
+    font-size:14px;
+    font-weight:700;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    margin-bottom:18px;
+}
+
+.global-heading h2{
+    font-size:46px;
+    line-height:1.2;
+    color:#222;
+    margin-bottom:20px;
+}
+
+.global-heading p{
+    max-width:700px;
+    margin:auto;
+    color:#666;
+    font-size:17px;
+    line-height:1.8;
+}
+
+/* ==========================================
+   Layout
+========================================== */
+
+.global-container{
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
+    gap:50px;
+    align-items:center;
+}
+
+/* ==========================================
+   Map
+========================================== */
+
+.global-map{
+    width:100%;
+    height:500px;
+
+    object-fit:contain;
+
+    background:#f5f5f5;
+
+    border:2px dashed #d9d9d9;
+
+    border-radius:24px;
+}
+
+/* ==========================================
+   Stats
+========================================== */
+
+.global-stats{
+    display:flex;
+    flex-direction:column;
+    gap:22px;
+}
+
+.global-card{
+
+    display:flex;
+    align-items:center;
+    gap:20px;
+
+    padding:24px;
+
+    background:#fff;
+
+    border:1px solid #ececec;
+
+    border-radius:20px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.06);
+
+    transition:all .35s ease;
+
+}
+
+.global-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.12);
+
+}
+
+.global-icon{
+
+    width:72px;
+    height:72px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+        135deg,
+        #d62828,
+        #ff5757
+    );
+
+    color:#fff;
+
+    font-size:28px;
+
+    flex-shrink:0;
+
+}
+
+.global-card-content{
+    flex:1;
+}
+
+.global-card h3{
+
+    font-size:34px;
+
+    color:#222;
+
+    margin-bottom:6px;
+
+    line-height:1;
+
+}
+
+.global-card p{
+
+    color:#666;
+
+    font-size:15px;
+
+    line-height:1.6;
+
+}
+
+/* ==========================================
+   Laptop
+========================================== */
+
+@media (max-width:1200px){
+
+.global-presence{
+
+padding:90px 5%;
+
+}
+
+.global-container{
+
+gap:40px;
+
+}
+
+.global-map{
+
+height:450px;
+
+}
+
+.global-heading h2{
+
+font-size:40px;
+
+}
+
+}
+
+/* ==========================================
+   Tablet
+========================================== */
+
+@media (max-width:992px){
+
+.global-container{
+
+grid-template-columns:1fr;
+
+gap:45px;
+
+}
+
+.global-map{
+
+height:420px;
+
+max-width:700px;
+
+margin:auto;
+
+}
+
+.global-stats{
+
+max-width:700px;
+
+margin:auto;
+
+width:100%;
+
+}
+
+}
+
+/* ==========================================
+   Mobile
+========================================== */
+
+@media (max-width:768px){
+
+.global-presence{
+
+padding:75px 20px;
+
+}
+
+.global-heading{
+
+margin-bottom:50px;
+
+}
+
+.global-heading span{
+
+font-size:13px;
+
+letter-spacing:2px;
+
+}
+
+.global-heading h2{
+
+font-size:34px;
+
+}
+
+.global-heading p{
+
+font-size:15px;
+
+line-height:1.8;
+
+}
+
+.global-map{
+
+height:300px;
+
+border-radius:18px;
+
+}
+
+.global-card{
+
+padding:20px;
+
+gap:16px;
+
+}
+
+.global-icon{
+
+width:60px;
+
+height:60px;
+
+font-size:24px;
+
+}
+
+.global-card h3{
+
+font-size:28px;
+
+}
+
+.global-card p{
+
+font-size:14px;
+
+}
+
+}
+
+/* ==========================================
+   Small Mobile
+========================================== */
+
+@media (max-width:500px){
+
+.global-presence{
+
+padding:60px 16px;
+
+}
+
+.global-heading{
+
+margin-bottom:40px;
+
+}
+
+.global-heading h2{
+
+font-size:28px;
+
+}
+
+.global-heading p{
+
+font-size:14px;
+
+}
+
+.global-map{
+
+height:240px;
+
+}
+
+.global-card{
+
+flex-direction:column;
+
+text-align:center;
+
+padding:22px 18px;
+
+}
+
+.global-icon{
+
+width:58px;
+
+height:58px;
+
+font-size:22px;
+
+margin-bottom:6px;
+
+}
+
+.global-card h3{
+
+font-size:26px;
+
+}
+
+.global-card p{
+
+font-size:14px;
+
+}
+
+}

@@ -1,0 +1,367 @@
+/* ==========================================
+   Contact CTA
+========================================== */
+
+.contact-cta{
+
+    position:relative;
+
+    padding:100px 6%;
+
+    background:linear-gradient(
+        135deg,
+        #b71c1c,
+        #d62828
+    );
+
+    overflow:hidden;
+
+}
+
+/* ==========================================
+   Overlay
+========================================== */
+
+.contact-cta-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.12);
+
+}
+
+/* ==========================================
+   Layout
+========================================== */
+
+.contact-cta-container{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:1400px;
+
+    margin:0 auto;
+
+    display:grid;
+
+    grid-template-columns:1.1fr .9fr;
+
+    gap:60px;
+
+    align-items:center;
+
+}
+
+/* ==========================================
+   Content
+========================================== */
+
+.contact-cta-content span{
+
+    display:inline-block;
+
+    color:#ffd166;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    margin-bottom:18px;
+
+}
+
+.contact-cta-content h2{
+
+    font-size:50px;
+
+    line-height:1.2;
+
+    color:#fff;
+
+    margin-bottom:24px;
+
+}
+
+.contact-cta-content p{
+
+    color:rgba(255,255,255,.92);
+
+    font-size:17px;
+
+    line-height:1.9;
+
+    margin-bottom:40px;
+
+}
+
+/* ==========================================
+   Buttons
+========================================== */
+
+.contact-cta-buttons{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:18px;
+
+}
+
+.contact-cta-buttons .primary-btn,
+.contact-cta-buttons .secondary-btn{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-width:210px;
+
+    height:56px;
+
+    padding:0 30px;
+
+    border-radius:12px;
+
+    text-decoration:none;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.contact-cta-buttons .primary-btn{
+
+    background:#fff;
+
+    color:#d62828;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.12);
+
+}
+
+.contact-cta-buttons .primary-btn:hover{
+
+    background:#111;
+
+    color:#fff;
+
+}
+
+.contact-cta-buttons .secondary-btn{
+
+    border:2px solid rgba(255,255,255,.9);
+
+    color:#fff;
+
+    backdrop-filter:blur(8px);
+
+}
+
+.contact-cta-buttons .secondary-btn:hover{
+
+    background:#fff;
+
+    color:#d62828;
+
+}
+
+/* ==========================================
+   Image
+========================================== */
+
+.contact-cta-image-wrapper{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.contact-cta-image{
+
+    width:100%;
+
+    max-width:500px;
+
+    display:block;
+
+    object-fit:contain;
+
+    filter:drop-shadow(
+        0 18px 40px rgba(0,0,0,.18)
+    );
+
+}
+
+/* ==========================================
+   Laptop
+========================================== */
+
+@media(max-width:1200px){
+
+.contact-cta{
+
+padding:90px 5%;
+
+}
+
+.contact-cta-container{
+
+gap:50px;
+
+}
+
+.contact-cta-content h2{
+
+font-size:42px;
+
+}
+
+}
+
+/* ==========================================
+   Tablet
+========================================== */
+
+@media(max-width:992px){
+
+.contact-cta-container{
+
+grid-template-columns:1fr;
+
+text-align:center;
+
+gap:50px;
+
+}
+
+.contact-cta-content{
+
+max-width:750px;
+
+margin:auto;
+
+}
+
+.contact-cta-buttons{
+
+justify-content:center;
+
+}
+
+.contact-cta-image{
+
+max-width:420px;
+
+}
+
+}
+
+/* ==========================================
+   Mobile
+========================================== */
+
+@media(max-width:768px){
+
+.contact-cta{
+
+padding:75px 20px;
+
+}
+
+.contact-cta-content span{
+
+font-size:13px;
+
+letter-spacing:2px;
+
+}
+
+.contact-cta-content h2{
+
+font-size:34px;
+
+}
+
+.contact-cta-content p{
+
+font-size:15px;
+
+line-height:1.8;
+
+}
+
+.contact-cta-buttons{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+.contact-cta-buttons .primary-btn,
+.contact-cta-buttons .secondary-btn{
+
+width:100%;
+
+max-width:320px;
+
+min-width:unset;
+
+}
+
+.contact-cta-image{
+
+max-width:340px;
+
+}
+
+}
+
+/* ==========================================
+   Small Mobile
+========================================== */
+
+@media(max-width:500px){
+
+.contact-cta{
+
+padding:60px 16px;
+
+}
+
+.contact-cta-content h2{
+
+font-size:28px;
+
+}
+
+.contact-cta-content p{
+
+font-size:14px;
+
+}
+
+.contact-cta-image{
+
+max-width:280px;
+
+}
+
+}

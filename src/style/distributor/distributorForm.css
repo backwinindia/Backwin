@@ -1,0 +1,164 @@
+/* ===========================
+   Distributor Form
+=========================== */
+
+.distributor-form-section{
+    padding:100px 8%;
+    background:#fff;
+}
+
+.form-heading{
+    max-width:760px;
+    margin:0 auto 60px;
+    text-align:center;
+}
+
+.form-heading span{
+    display:inline-block;
+    color:#d62828;
+    font-size:14px;
+    font-weight:700;
+    letter-spacing:3px;
+    margin-bottom:18px;
+}
+
+.form-heading h2{
+    font-size:42px;
+    color:#222;
+    margin-bottom:20px;
+}
+
+.form-heading p{
+    color:#666;
+    line-height:1.8;
+}
+
+.distributor-form{
+    max-width:1100px;
+    margin:auto;
+    background:#fff;
+    border:1px solid #eee;
+    border-radius:24px;
+    padding:45px;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+.form-group{
+    display:flex;
+    flex-direction:column;
+    margin-bottom:25px;
+}
+
+.form-group label{
+    margin-bottom:10px;
+    font-weight:600;
+    color:#333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+
+    width:100%;
+
+    padding:15px 18px;
+
+    border:1px solid #ddd;
+
+    border-radius:12px;
+
+    font-size:15px;
+
+    outline:none;
+
+    transition:.3s;
+
+    font-family:inherit;
+
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+
+    border-color:#d62828;
+
+}
+
+.submit-btn{
+
+    border:none;
+
+    background:#d62828;
+
+    color:white;
+
+    padding:16px 40px;
+
+    border-radius:50px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.submit-btn:hover{
+
+    background:#b71c1c;
+
+}
+
+@media(max-width:768px){
+
+.distributor-form-section{
+
+padding:80px 5%;
+
+}
+
+.form-heading h2{
+
+font-size:32px;
+
+}
+
+.distributor-form{
+
+padding:30px;
+
+}
+
+.form-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:500px){
+
+.form-heading h2{
+
+font-size:28px;
+
+}
+
+.submit-btn{
+
+width:100%;
+
+}
+
+}

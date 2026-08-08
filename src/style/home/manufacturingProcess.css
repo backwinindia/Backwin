@@ -1,0 +1,239 @@
+/* ===========================
+   Manufacturing Process
+=========================== */
+
+.process {
+  padding: 100px 8%;
+  background: #f8f8f8;
+}
+
+.process-heading {
+  max-width: 750px;
+  margin: 0 auto 80px;
+  text-align: center;
+}
+
+.process-heading span {
+  display: inline-block;
+  color: #d62828;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+}
+
+.process-heading h2 {
+  font-size: 42px;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.process-heading p {
+  color: #666;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+/* ===========================
+   Timeline
+=========================== */
+
+.timeline {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 25px;
+  position: relative;
+}
+
+/* ===========================
+   Timeline Card
+=========================== */
+
+.timeline-item {
+  position: relative;
+  flex: 1;
+  text-align: center;
+  background: white;
+  padding: 35px 25px;
+  border-radius: 22px;
+  box-shadow: 0 12px 30px rgba(0,0,0,.08);
+  transition: .35s;
+}
+
+.timeline-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 18px 40px rgba(0,0,0,.15);
+}
+
+/* ===========================
+   Step Number
+=========================== */
+
+.step-number {
+
+  width: 55px;
+  height: 55px;
+
+  margin: 0 auto 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+
+  background: #d62828;
+
+  color: white;
+
+  font-size: 18px;
+  font-weight: bold;
+
+}
+
+/* ===========================
+   Icon
+=========================== */
+
+.step-icon {
+
+  width: 80px;
+  height: 80px;
+
+  margin: 0 auto 25px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+      135deg,
+      #d62828,
+      #ff5b5b
+  );
+
+  color: white;
+
+  font-size: 34px;
+
+}
+
+/* ===========================
+   Text
+=========================== */
+
+.timeline-item h3 {
+
+  font-size: 22px;
+
+  color: #222;
+
+  margin-bottom: 15px;
+
+}
+
+.timeline-item p {
+
+  color: #666;
+
+  line-height: 1.8;
+
+  font-size: 15px;
+
+}
+
+/* ===========================
+   Connecting Line
+=========================== */
+
+.timeline-line {
+
+  position: absolute;
+
+  top: 68px;
+
+  right: -37px;
+
+  width: 50px;
+
+  height: 3px;
+
+  background: #d62828;
+
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media (max-width: 1200px) {
+
+  .timeline {
+
+    flex-wrap: wrap;
+
+  }
+
+  .timeline-item {
+
+    flex: 0 0 calc(50% - 15px);
+
+  }
+
+  .timeline-line {
+
+    display: none;
+
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .process {
+
+    padding: 80px 5%;
+
+  }
+
+  .process-heading h2 {
+
+    font-size: 32px;
+
+  }
+
+  .timeline {
+
+    flex-direction: column;
+
+  }
+
+  .timeline-item {
+
+    width: 100%;
+
+  }
+
+}
+
+@media (max-width: 500px) {
+
+  .process-heading h2 {
+
+    font-size: 28px;
+
+  }
+
+  .step-icon {
+
+    width: 70px;
+    height: 70px;
+
+    font-size: 28px;
+
+  }
+
+}

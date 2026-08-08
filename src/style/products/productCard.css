@@ -1,0 +1,307 @@
+/* ==========================================
+   Product Card
+========================================== */
+
+.product-card{
+
+    display:flex;
+
+    flex-direction:column;
+
+    height:100%;
+
+    background:#fff;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    border:1px solid #ececec;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.product-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 22px 55px rgba(0,0,0,.15);
+
+}
+
+/* ==========================================
+   Image
+========================================== */
+
+.product-image-wrapper{
+
+    width:100%;
+
+    aspect-ratio:16/9;
+
+    overflow:hidden;
+
+    background:#f3f3f3;
+
+}
+
+.product-image{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    object-position:center;
+
+    transition:.45s;
+
+}
+
+.product-card:hover .product-image{
+
+    transform:scale(1.06);
+
+}
+
+/* ==========================================
+   Content
+========================================== */
+
+.product-content{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+    padding:28px;
+
+}
+
+.product-category{
+
+    display:inline-flex;
+
+    align-self:flex-start;
+
+    padding:8px 16px;
+
+    border-radius:40px;
+
+    background:#fff2f2;
+
+    color:#d62828;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+    margin-bottom:18px;
+
+}
+
+.product-content h3{
+
+    font-size:32px;
+
+    color:#222;
+
+    line-height:1.2;
+
+    margin-bottom:16px;
+
+}
+
+.product-content p{
+
+    flex:1;
+
+    color:#666;
+
+    font-size:15px;
+
+    line-height:1.8;
+
+    margin-bottom:30px;
+
+}
+
+/* ==========================================
+   Footer
+========================================== */
+
+.product-footer{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:16px;
+
+}
+
+.product-volume{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:11px 18px;
+
+    border-radius:40px;
+
+    background:#f4f4f4;
+
+    color:#444;
+
+    font-weight:700;
+
+    font-size:14px;
+
+    min-width:95px;
+
+}
+
+/* ==========================================
+   Button
+========================================== */
+
+.view-product-btn{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:13px 24px;
+
+    border-radius:12px;
+
+    background:#d62828;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.view-product-btn:hover{
+
+    background:#111;
+
+}
+
+/* ==========================================
+   Tablet
+========================================== */
+
+@media(max-width:992px){
+
+.product-content{
+
+padding:24px;
+
+}
+
+.product-content h3{
+
+font-size:28px;
+
+}
+
+}
+
+/* ==========================================
+   Mobile
+========================================== */
+
+@media(max-width:768px){
+
+.product-image-wrapper{
+
+aspect-ratio:16/10;
+
+}
+
+.product-content{
+
+padding:22px;
+
+}
+
+.product-content h3{
+
+font-size:24px;
+
+}
+
+.product-footer{
+
+flex-direction:column;
+
+align-items:stretch;
+
+gap:14px;
+
+}
+
+.product-volume{
+
+width:100%;
+
+}
+
+.view-product-btn{
+
+width:100%;
+
+}
+
+}
+
+/* ==========================================
+   Small Mobile
+========================================== */
+
+@media(max-width:500px){
+
+.product-content{
+
+padding:18px;
+
+}
+
+.product-content h3{
+
+font-size:22px;
+
+}
+
+.product-content p{
+
+font-size:14px;
+
+}
+
+}

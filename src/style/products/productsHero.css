@@ -1,0 +1,299 @@
+/* ==========================================
+   Products Hero
+========================================== */
+
+.products-hero{
+
+    position:relative;
+
+    width:100%;
+
+    height:630px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+}
+
+/* ==========================================
+   Background
+========================================== */
+
+.products-hero-image{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    object-position:center;
+
+    background:linear-gradient(
+        135deg,
+        #ececec,
+        #dadada
+    );
+
+}
+
+/* ==========================================
+   Overlay
+========================================== */
+
+.products-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.65);
+
+}
+
+/* ==========================================
+   Content
+========================================== */
+
+.products-content{
+
+    position:relative;
+
+    z-index:2;
+
+    width:90%;
+
+    max-width:900px;
+
+    text-align:center;
+
+    color:#fff;
+
+}
+
+/* Hero Tag */
+
+.hero-tag{
+
+    display:inline-block;
+
+    color:#ffb703;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    margin-bottom:20px;
+
+}
+
+.products-content h1{
+
+    font-size:60px;
+
+    font-weight:700;
+
+    line-height:1.2;
+
+    margin-bottom:25px;
+
+}
+
+.products-content p{
+
+    max-width:760px;
+
+    margin:0 auto 35px;
+
+    color:rgba(255,255,255,.9);
+
+    font-size:18px;
+
+    line-height:1.9;
+
+}
+
+/* ==========================================
+   Breadcrumb
+========================================== */
+
+.products-breadcrumb{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+    font-size:17px;
+
+}
+
+.products-breadcrumb a{
+
+    color:#fff;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.products-breadcrumb a:hover{
+
+    color:#ffb703;
+
+}
+
+.products-breadcrumb span{
+
+    display:inline;
+
+    margin:0;
+
+    color:rgba(255,255,255,.65);
+
+    font-weight:500;
+
+}
+
+.products-breadcrumb strong{
+
+    color:#ffb703;
+
+    font-weight:600;
+
+}
+
+/* ==========================================
+   Tablet
+========================================== */
+
+@media(max-width:992px){
+
+.products-hero{
+
+height:520px;
+
+}
+
+.products-content h1{
+
+font-size:48px;
+
+}
+
+.products-content p{
+
+font-size:17px;
+
+}
+
+}
+
+/* ==========================================
+   Mobile
+========================================== */
+
+@media(max-width:768px){
+
+.products-hero{
+
+height:430px;
+
+}
+
+.hero-tag{
+
+font-size:13px;
+
+letter-spacing:2px;
+
+}
+
+.products-content h1{
+
+font-size:38px;
+
+}
+
+.products-content p{
+
+font-size:16px;
+
+line-height:1.8;
+
+}
+
+.products-breadcrumb{
+
+font-size:15px;
+
+gap:10px;
+
+}
+
+}
+
+/* ==========================================
+   Small Mobile
+========================================== */
+
+@media(max-width:500px){
+
+.products-hero{
+
+height:350px;
+
+}
+
+.hero-tag{
+
+font-size:12px;
+
+letter-spacing:2px;
+
+margin-bottom:16px;
+
+}
+
+.products-content h1{
+
+font-size:30px;
+
+margin-bottom:18px;
+
+}
+
+.products-content p{
+
+font-size:15px;
+
+margin-bottom:28px;
+
+}
+
+.products-breadcrumb{
+
+font-size:14px;
+
+gap:8px;
+
+}
+
+}

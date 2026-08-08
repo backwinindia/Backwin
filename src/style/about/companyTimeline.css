@@ -1,0 +1,296 @@
+/* ===========================
+   Company Timeline
+=========================== */
+
+.timeline-section {
+  padding: 100px 8%;
+  background: #ffffff;
+}
+
+/* ===========================
+   Heading
+=========================== */
+
+.timeline-heading {
+  max-width: 750px;
+  margin: 0 auto 80px;
+  text-align: center;
+}
+
+.timeline-heading span {
+  display: inline-block;
+  color: #d62828;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 18px;
+}
+
+.timeline-heading h2 {
+  font-size: 42px;
+  color: #222;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.timeline-heading p {
+  color: #666;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+/* ===========================
+   Timeline
+=========================== */
+
+.timeline-wrapper {
+  position: relative;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.timeline-center-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+
+  width: 4px;
+  height: 100%;
+
+  background: linear-gradient(
+      to bottom,
+      #d62828,
+      #ff7777
+  );
+
+  border-radius: 20px;
+}
+
+/* ===========================
+   Rows
+=========================== */
+
+.timeline-row {
+  width: 50%;
+  padding: 20px 45px;
+  position: relative;
+}
+
+.timeline-row.left {
+  left: 0;
+}
+
+.timeline-row.right {
+  left: 50%;
+}
+
+/* ===========================
+   Dot
+=========================== */
+
+.timeline-row::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: 50px;
+
+  width: 22px;
+  height: 22px;
+
+  border-radius: 50%;
+
+  background: #d62828;
+
+  border: 5px solid white;
+
+  box-shadow: 0 0 0 5px rgba(214,40,40,.18);
+
+}
+
+.timeline-row.left::before {
+
+  right: -11px;
+
+}
+
+.timeline-row.right::before {
+
+  left: -11px;
+
+}
+
+/* ===========================
+   Card
+=========================== */
+
+.timeline-card {
+
+  background: white;
+
+  border-radius: 22px;
+
+  padding: 35px;
+
+  box-shadow: 0 15px 35px rgba(0,0,0,.08);
+
+  transition: .35s;
+
+}
+
+.timeline-card:hover {
+
+  transform: translateY(-8px);
+
+  box-shadow: 0 20px 45px rgba(0,0,0,.15);
+
+}
+
+/* ===========================
+   Year
+=========================== */
+
+.timeline-year {
+
+  display: inline-block;
+
+  padding: 10px 20px;
+
+  border-radius: 50px;
+
+  background: linear-gradient(
+      135deg,
+      #d62828,
+      #ff5555
+  );
+
+  color: white;
+
+  font-size: 15px;
+
+  font-weight: bold;
+
+  margin-bottom: 20px;
+
+}
+
+/* ===========================
+   Text
+=========================== */
+
+.timeline-card h3 {
+
+  font-size: 28px;
+
+  color: #222;
+
+  margin-bottom: 15px;
+
+}
+
+.timeline-card p {
+
+  color: #666;
+
+  line-height: 1.9;
+
+  font-size: 15px;
+
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media (max-width:900px){
+
+.timeline-center-line{
+
+left:25px;
+
+}
+
+.timeline-row{
+
+width:100%;
+
+padding-left:70px;
+
+padding-right:20px;
+
+}
+
+.timeline-row.left,
+.timeline-row.right{
+
+left:0;
+
+}
+
+.timeline-row::before{
+
+left:14px;
+
+}
+
+}
+
+@media (max-width:768px){
+
+.timeline-section{
+
+padding:80px 5%;
+
+}
+
+.timeline-heading h2{
+
+font-size:32px;
+
+}
+
+.timeline-card{
+
+padding:28px;
+
+}
+
+.timeline-card h3{
+
+font-size:24px;
+
+}
+
+}
+
+@media (max-width:500px){
+
+.timeline-heading h2{
+
+font-size:28px;
+
+}
+
+.timeline-card{
+
+padding:22px;
+
+}
+
+.timeline-year{
+
+font-size:13px;
+
+padding:8px 16px;
+
+}
+
+.timeline-card h3{
+
+font-size:22px;
+
+}
+
+}

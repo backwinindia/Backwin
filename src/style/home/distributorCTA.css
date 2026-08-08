@@ -1,0 +1,407 @@
+/* ==========================================
+   Distributor CTA
+========================================== */
+
+.distributor{
+
+    padding:100px 6%;
+
+    background:linear-gradient(
+        135deg,
+        #b71c1c,
+        #d62828
+    );
+
+    overflow:hidden;
+
+}
+
+/* ==========================================
+   Layout
+========================================== */
+
+.distributor-container{
+
+    max-width:1400px;
+
+    margin:0 auto;
+
+    display:grid;
+
+    grid-template-columns:1.1fr .9fr;
+
+    align-items:center;
+
+    gap:60px;
+
+}
+
+/* ==========================================
+   Left Content
+========================================== */
+
+.distributor-content span{
+
+    display:inline-block;
+
+    color:rgba(255,255,255,.85);
+
+    font-size:14px;
+
+    font-weight:700;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    margin-bottom:18px;
+
+}
+
+.distributor-content h2{
+
+    font-size:50px;
+
+    line-height:1.2;
+
+    color:#fff;
+
+    margin-bottom:24px;
+
+}
+
+.distributor-content p{
+
+    color:rgba(255,255,255,.92);
+
+    font-size:17px;
+
+    line-height:1.9;
+
+    margin-bottom:40px;
+
+}
+
+/* ==========================================
+   Features
+========================================== */
+
+.distributor-features{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+    margin-bottom:40px;
+
+}
+
+.distributor-features div{
+
+    padding:18px 20px;
+
+    border-radius:16px;
+
+    background:rgba(255,255,255,.12);
+
+    border:1px solid rgba(255,255,255,.18);
+
+    backdrop-filter:blur(12px);
+
+    color:#fff;
+
+    font-size:15px;
+
+    font-weight:500;
+
+    transition:.35s;
+
+}
+
+.distributor-features div:hover{
+
+    transform:translateY(-5px);
+
+    background:rgba(255,255,255,.18);
+
+}
+
+/* ==========================================
+   Buttons
+========================================== */
+
+.distributor-buttons{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:18px;
+
+}
+
+.distributor-buttons .primary-btn,
+.distributor-buttons .secondary-btn{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-width:210px;
+
+    height:56px;
+
+    padding:0 30px;
+
+    border-radius:12px;
+
+    text-decoration:none;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.distributor-buttons .primary-btn{
+
+    background:#fff;
+
+    color:#d62828;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.12);
+
+}
+
+.distributor-buttons .primary-btn:hover{
+
+    background:#111;
+
+    color:#fff;
+
+}
+
+.distributor-buttons .secondary-btn{
+
+    border:2px solid rgba(255,255,255,.9);
+
+    color:#fff;
+
+    backdrop-filter:blur(8px);
+
+}
+
+.distributor-buttons .secondary-btn:hover{
+
+    background:#fff;
+
+    color:#d62828;
+
+}
+
+/* ==========================================
+   Image
+========================================== */
+
+.distributor-image-wrapper{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.distributor-image{
+
+    width:100%;
+
+    max-width:500px;
+
+    display:block;
+
+    object-fit:contain;
+
+    filter:drop-shadow(
+        0 18px 40px rgba(0,0,0,.18)
+    );
+
+}
+
+/* ==========================================
+   Laptop
+========================================== */
+
+@media(max-width:1200px){
+
+.distributor{
+
+padding:90px 5%;
+
+}
+
+.distributor-container{
+
+gap:50px;
+
+}
+
+.distributor-content h2{
+
+font-size:42px;
+
+}
+
+}
+
+/* ==========================================
+   Tablet
+========================================== */
+
+@media(max-width:992px){
+
+.distributor-container{
+
+grid-template-columns:1fr;
+
+text-align:center;
+
+gap:50px;
+
+}
+
+.distributor-content{
+
+max-width:750px;
+
+margin:auto;
+
+}
+
+.distributor-buttons{
+
+justify-content:center;
+
+}
+
+.distributor-image{
+
+max-width:420px;
+
+}
+
+}
+
+/* ==========================================
+   Mobile
+========================================== */
+
+@media(max-width:768px){
+
+.distributor{
+
+padding:75px 20px;
+
+}
+
+.distributor-content span{
+
+font-size:13px;
+
+letter-spacing:2px;
+
+}
+
+.distributor-content h2{
+
+font-size:34px;
+
+}
+
+.distributor-content p{
+
+font-size:15px;
+
+line-height:1.8;
+
+}
+
+.distributor-features{
+
+grid-template-columns:1fr;
+
+gap:14px;
+
+}
+
+.distributor-features div{
+
+padding:16px;
+
+}
+
+.distributor-buttons{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+.distributor-buttons .primary-btn,
+.distributor-buttons .secondary-btn{
+
+width:100%;
+
+max-width:320px;
+
+min-width:unset;
+
+}
+
+.distributor-image{
+
+max-width:340px;
+
+}
+
+}
+
+/* ==========================================
+   Small Mobile
+========================================== */
+
+@media(max-width:500px){
+
+.distributor{
+
+padding:60px 16px;
+
+}
+
+.distributor-content h2{
+
+font-size:28px;
+
+}
+
+.distributor-content p{
+
+font-size:14px;
+
+}
+
+.distributor-image{
+
+max-width:280px;
+
+}
+
+}
