@@ -2,17 +2,15 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 import "../../style/about/aboutHero.css";
-import abouthero from "../../assets/videos/abouthero.mp4";
+import abouthero from "../../assets/images/about/abouthero.jpg";
 
 const AboutHero = () => {
   return (
     <section className="about-hero">
 
-      <video
+      <img
         src={abouthero}
-        autoPlay
-        loop
-        muted
+        alt="Back Win About Banner"
         className="about-hero-video"
       />
 
