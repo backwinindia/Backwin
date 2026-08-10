@@ -22,6 +22,9 @@
 
     padding:120px 20px 80px;
 
+    background-color:black;
+    z-index:-3;
+
 }
 
 /* ==================================
