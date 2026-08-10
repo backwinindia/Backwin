@@ -10,6 +10,8 @@ import GoliSodaSection from "../components/products/GoliSodaSection";
 import WhyOurProducts from "../components/products/WhyOurProducts";
 import ProductsCTA from "../components/products/ProductsCTA";
 
+import Catalogbtn from "../components/products/Catalogbtn";
+
 const Products = () => {
   return (
    <>
@@ -26,6 +28,8 @@ const Products = () => {
     <NataDeCocoSection />
 
     <GoliSodaSection />
+
+    <Catalogbtn />
 
     <WhyOurProducts />
 

@@ -31,7 +31,7 @@ const DistributorForm = () => {
     e.preventDefault();
 
     // Replace with your company WhatsApp number
-    const whatsappNumber = "916290906402";
+    const whatsappNumber = "918160607668";
 
     const message = `*NEW DISTRIBUTOR INQUIRY*
 

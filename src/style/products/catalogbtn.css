@@ -1,0 +1,34 @@
+.catalog-btn-container{
+    width:100vw;
+    display:flex;
+    justify-content:center; 
+    align-items:center;
+}
+.catalog-btn-container button{
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:13px 24px;
+
+    border-radius:12px;
+
+    background:#d62828;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+    border:none;
+}
+.catalog-btn-container button:hover{
+     background:#111;
+}       
