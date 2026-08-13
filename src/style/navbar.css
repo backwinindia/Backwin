@@ -1,541 +1,795 @@
 /* ==========================================
-   Reset
+   Global Reset
 ========================================== */
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-    font-family:"Poppins",sans-serif;
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
-a{
-    text-decoration:none;
+body {
+    font-family: "Poppins", sans-serif;
 }
+
+#root {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
 
 /* ==========================================
    Navbar
 ========================================== */
 
-.navbar{
+.navbar {
 
-    position:fixed;
+    position: fixed;
 
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
 
-    width:100vw;
+    /* Use 100%, NOT 100vw */
+    width: 100%;
 
-    z-index:1000;
+    z-index: 1000;
 
-    padding:18px 0;
+    padding: 18px 0;
 
-    background:rgba(10,10,10,.75);
+    background: rgba(10, 10, 10, 0.979);
 
-    backdrop-filter:blur(18px);
+    backdrop-filter: blur(18px);
 
-    border-bottom:1px solid rgba(255,255,255,.08);
+    -webkit-backdrop-filter: blur(18px);
 
-    transition:.35s;
+    border-bottom: 1px solid rgba(255, 255, 255, .08);
+
+    transition: .35s;
+
+}
+
+
+/* ==========================================
+   Container
+========================================== */
+
+.container {
+
+    width: min(80%, 1400px);
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
 
 }
 
-.container{
-
-    width:min(92%,1400px);
-
-    margin:auto;
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-}
 
 /* ==========================================
    Logo
 ========================================== */
 
-.logo{
+.logo {
 
-    font-size:2rem;
+    font-size: 2rem;
 
-    font-weight:700;
+    font-weight: 700;
 
-    color:#fff;
+    color: #fff;
 
-    letter-spacing:.5px;
+    letter-spacing: .5px;
+
+    white-space: nowrap;
+
+}
+
+.logo span {
+
+    color: #d62828;
 
 }
 
-.logo span{
-
-    color:#d62828;
-
-}
 
 /* ==========================================
    Desktop Navigation
 ========================================== */
 
-.nav-menu{
+.nav-menu {
 
-    display:flex;
+    display: flex;
 
-    align-items:center;
+    align-items: center;
 
-    gap:32px;
-
-}
-
-.nav-menu>a,
-.products-dropdown>a{
-
-    position:relative;
-
-    color:#fff;
-
-    font-size:15px;
-
-    font-weight:500;
-
-    transition:.3s;
+    gap: 32px;
 
 }
 
-.nav-menu>a::after,
-.products-dropdown>a::after{
 
-    content:"";
+/* ==========================================
+   Navigation Links
+========================================== */
 
-    position:absolute;
+.nav-menu > a,
+.products-dropdown > a {
 
-    left:0;
+    position: relative;
 
-    bottom:-8px;
+    color: #fff;
 
-    width:0;
+    font-size: 15px;
 
-    height:2px;
+    font-weight: 500;
 
-    background:#d62828;
-
-    transition:.3s;
-
-}
-
-.nav-menu>a:hover,
-.nav-menu>a.active,
-.products-dropdown>a:hover,
-.products-dropdown>a.active{
-
-    color:#fff;
+    transition: .3s;
 
 }
 
-.nav-menu>a:hover::after,
-.nav-menu>a.active::after,
-.products-dropdown>a:hover::after,
-.products-dropdown>a.active::after{
 
-    width:100%;
+.nav-menu > a::after,
+.products-dropdown > a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -8px;
+
+    width: 0;
+
+    height: 2px;
+
+    background: #d62828;
+
+    transition: .3s;
 
 }
+
+
+.nav-menu > a:hover,
+.nav-menu > a.active,
+.products-dropdown > a:hover,
+.products-dropdown > a.active {
+
+    color: #fff;
+
+}
+
+
+.nav-menu > a:hover::after,
+.nav-menu > a.active::after,
+.products-dropdown > a:hover::after,
+.products-dropdown > a.active::after {
+
+    width: 100%;
+
+}
+
 
 /* ==========================================
    Products Dropdown
 ========================================== */
 
-.products-dropdown{
+.products-dropdown {
 
-    position:relative;
+    position: relative;
 
-    display:flex;
+    display: flex;
 
-    align-items:center;
+    align-items: center;
 
-    gap:6px;
-
-}
-
-.dropdown-btn{
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    border:none;
-
-    background:none;
-
-    color:#fff;
-
-    cursor:pointer;
-
-    transition:.3s;
+    gap: 6px;
 
 }
 
-.dropdown-btn:hover{
 
-    color:#d62828;
+/* ==========================================
+   Dropdown Button
+========================================== */
 
-    transform:rotate(180deg);
+.dropdown-btn {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 24px;
+    height: 24px;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: #fff;
+
+    cursor: pointer;
+
+    transition: .3s;
 
 }
 
-.dropdown-menu{
 
-    position:absolute;
+.dropdown-btn:hover {
 
-    top:58px;
+    color: #d62828;
 
-    left:0;
+    transform: rotate(180deg);
 
-    width:240px;
+}
 
-    background:#fff;
 
-    border-radius:16px;
+/* ==========================================
+   Desktop Dropdown Menu
+========================================== */
 
-    overflow:hidden;
+.dropdown-menu {
 
-    display:none;
+    position: absolute;
 
-    flex-direction:column;
+    top: 58px;
+
+    left: 0;
+
+    width: 240px;
+
+    background: #fff;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    display: none;
+
+    flex-direction: column;
 
     box-shadow:
-        0 15px 40px rgba(0,0,0,.15);
+        0 15px 40px rgba(0, 0, 0, .15);
 
 }
 
-.dropdown-menu.show{
 
-    display:flex;
+.dropdown-menu.show {
 
-    animation:dropdown .25s ease;
+    display: flex;
+
+    animation: dropdown .25s ease;
 
 }
 
-@keyframes dropdown{
 
-    from{
+@keyframes dropdown {
 
-        opacity:0;
+    from {
 
-        transform:translateY(12px);
+        opacity: 0;
+
+        transform: translateY(12px);
 
     }
 
-    to{
+    to {
 
-        opacity:1;
+        opacity: 1;
 
-        transform:translateY(0);
+        transform: translateY(0);
 
     }
 
 }
 
-.dropdown-menu a{
 
-    padding:15px 22px;
+.dropdown-menu a {
 
-    color:#333;
+    padding: 15px 22px;
 
-    font-size:15px;
+    color: #333;
 
-    transition:.25s;
+    font-size: 15px;
+
+    transition: .25s;
+
+}
+
+
+.dropdown-menu a:hover {
+
+    background: #f7f7f7;
+
+    color: #d62828;
+
+    padding-left: 28px;
 
 }
 
-.dropdown-menu a:hover{
 
-    background:#f7f7f7;
+/* ==========================================
+   Dealer Button Wrapper
+========================================== */
 
-    color:#d62828;
+.dealer-btn-wrapper {
 
-    padding-left:28px;
+    display: flex;
+
+    align-items: center;
+
+    flex-shrink: 0;
 
 }
+
 
 /* ==========================================
    Dealer Button
 ========================================== */
 
-.dealer-btn{
+.dealer-btn {
 
-    border:none;
+    display: inline-flex;
 
-    cursor:pointer;
+    align-items: center;
 
-    height:48px;
+    justify-content: center;
 
-    padding:0 26px;
+    height: 48px;
 
-    border-radius:12px;
+    min-width: 145px;
 
-    background:#d62828;
+    padding: 0 24px;
 
-    color:#fff;
+    border: none;
 
-    font-size:15px;
+    border-radius: 12px;
 
-    font-weight:600;
+    background: #d62828;
 
-    transition:.3s;
+    color: #fff;
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    line-height: 1;
+
+    white-space: nowrap;
+
+    cursor: pointer;
+
+    transition:
+        background .3s ease,
+        transform .3s ease,
+        box-shadow .3s ease;
 
 }
 
-.dealer-btn:hover{
 
-    background:#111;
+.dealer-btn:hover {
 
-    transform:translateY(-2px);
+    background: #111;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, .2);
 
 }
+
+
+.dealer-btn:active {
+
+    transform: translateY(0);
+
+}
+
 
 /* ==========================================
    Mobile Menu Icon
 ========================================== */
 
-.menu-icon{
+.menu-icon {
 
-    display:none;
+    display: none;
 
-    color:#fff;
+    align-items: center;
 
-    font-size:1.8rem;
+    justify-content: center;
 
-    cursor:pointer;
+    width: 44px;
 
-    z-index:1002;
+    height: 44px;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: #fff;
+
+    font-size: 1.8rem;
+
+    cursor: pointer;
+
+    z-index: 1002;
 
 }
+
 
 /* ==========================================
    Overlay
 ========================================== */
 
-.nav-overlay{
+.nav-overlay {
 
-    position:fixed;
+    position: fixed;
 
-    inset:0;
+    inset: 0;
 
-    background:rgba(0,0,0,.55);
+    width: 100%;
 
-    backdrop-filter:blur(4px);
+    height: 100%;
 
-    z-index:998;
+    background: rgba(0, 0, 0, .55);
+
+    backdrop-filter: blur(4px);
+
+    -webkit-backdrop-filter: blur(4px);
+
+    z-index: 998;
 
 }
+
 
 /* ==========================================
-   Tablet
+   Tablet / Mobile Navigation
 ========================================== */
 
-@media(max-width:950px){
+@media (max-width: 950px) {
 
-.menu-icon{
+    .menu-icon {
 
-display:block;
+        display: flex;
+
+    }
+
+
+    /* ==================================
+       Mobile Sidebar
+    ================================== */
+
+    .nav-menu {
+
+        position: fixed;
+
+        top: 0;
+
+        right: 0;
+
+        width: 320px;
+
+        max-width: 100vw;
+
+        height: 100vh;
+
+        background: #111;
+
+        padding: 95px 28px 40px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 0;
+
+        /*
+         * IMPORTANT:
+         * Do NOT use right:-100%.
+         * Use transform to move the menu
+         * completely outside the viewport.
+         */
+
+        transform: translateX(100%);
+
+        transition: transform .4s ease;
+
+        overflow-y: auto;
+
+        overflow-x: hidden;
+
+        z-index: 999;
+
+        box-shadow:
+            -10px 0 35px rgba(0, 0, 0, .25);
+
+    }
+
+
+    /* ==================================
+       Open Sidebar
+    ================================== */
+
+    .nav-menu.active {
+
+        transform: translateX(0);
+
+    }
+
+
+    /* ==================================
+       Main Navigation Links
+    ================================== */
+
+    .nav-menu > a {
+
+        width: 100%;
+
+        padding: 18px 0;
+
+        border-bottom:
+            1px solid rgba(255, 255, 255, .08);
+
+    }
+
+
+    .nav-menu > a::after {
+
+        display: none;
+
+    }
+
+
+    /* ==================================
+       Products Dropdown
+    ================================== */
+
+    .products-dropdown {
+
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        position: relative;
+
+    }
+
+
+    .products-dropdown > a {
+
+        width: 100%;
+
+        padding: 18px 0;
+
+        border-bottom:
+            1px solid rgba(255, 255, 255, .08);
+
+    }
+
+
+    .products-dropdown > a::after {
+
+        display: none;
+
+    }
+
+
+    /* ==================================
+       Dropdown Arrow
+    ================================== */
+
+    .dropdown-btn {
+
+        position: absolute;
+
+        right: 0;
+
+        top: 18px;
+
+    }
+
+
+    /* ==================================
+       Mobile Dropdown
+    ================================== */
+
+    .dropdown-menu {
+
+        position: static;
+
+        width: 100%;
+
+        background: transparent;
+
+        box-shadow: none;
+
+        border-radius: 0;
+
+        display: none;
+
+        margin-bottom: 12px;
+
+        animation: none;
+
+    }
+
+
+    .dropdown-menu.show {
+
+        display: flex;
+
+    }
+
+
+    .dropdown-menu a {
+
+        width: 100%;
+
+        padding: 14px 20px;
+
+        color: #fff;
+
+        border-left:
+            3px solid #d62828;
+
+    }
+
+
+    .dropdown-menu a:hover {
+
+        background:
+            rgba(255, 255, 255, .05);
+
+        color: #d62828;
+
+        padding-left: 28px;
+
+    }
+
+
+    /* ==================================
+       Dealer Button
+    ================================== */
+
+    .dealer-btn-wrapper {
+
+        width: 100%;
+
+        margin-top: 28px;
+
+        padding: 0;
+
+    }
+
+
+    .dealer-btn {
+
+        width: 100%;
+
+        min-width: 0;
+
+        height: 52px;
+
+        padding: 0 20px;
+
+        border-radius: 12px;
+
+        font-size: 15px;
+
+    }
 
 }
 
-.nav-menu{
-
-position:fixed;
-
-top:0;
-
-right:-100%;
-
-width:320px;
-
-height:100vh;
-
-background:#111;
-
-padding:95px 28px 40px;
-
-display:flex;
-
-flex-direction:column;
-
-align-items:flex-start;
-
-gap:0;
-
-transition:.4s;
-
-overflow-y:auto;
-
-z-index:999;
-
-box-shadow:-10px 0 35px rgba(0,0,0,.25);
-
-}
-
-.nav-menu.active{
-
-right:0;
-
-}
-
-.nav-menu>a{
-
-width:100%;
-
-padding:18px 0;
-
-border-bottom:1px solid rgba(255,255,255,.08);
-
-}
-
-.nav-menu>a::after{
-
-display:none;
-
-}
-
-/* Dropdown */
-
-.products-dropdown{
-
-width:100%;
-
-display:flex;
-
-flex-direction:column;
-
-align-items:flex-start;
-
-position:relative;
-
-}
-
-.products-dropdown>a{
-
-width:100%;
-
-padding:18px 0;
-
-border-bottom:1px solid rgba(255,255,255,.08);
-
-}
-
-.products-dropdown>a::after{
-
-display:none;
-
-}
-
-.dropdown-btn{
-
-position:absolute;
-
-right:0;
-
-top:18px;
-
-}
-
-.dropdown-menu{
-
-position:static;
-
-width:100%;
-
-background:transparent;
-
-box-shadow:none;
-
-border-radius:0;
-
-display:none;
-
-margin-bottom:12px;
-
-animation:none;
-
-}
-
-.dropdown-menu.show{
-
-display:flex;
-
-}
-
-.dropdown-menu a{
-
-padding:14px 20px;
-
-color:#fff;
-
-border-left:3px solid #d62828;
-
-}
-
-.dropdown-menu a:hover{
-
-background:rgba(255,255,255,.05);
-
-padding-left:28px;
-
-}
-
-.dealer-btn{
-
-margin-top:28px;
-
-width:100%;
-
-height:50px;
-
-}
-
-}
 
 /* ==========================================
    Mobile
 ========================================== */
 
-@media(max-width:600px){
+@media (max-width: 600px) {
 
-.container{
+    .container {
 
-width:92%;
+        width: 92%;
 
-}
+    }
 
-.logo{
 
-font-size:1.7rem;
+    .navbar {
 
-}
+        padding: 15px 0;
 
-.nav-menu{
+    }
 
-width:70%;
 
-}
+    .logo {
 
-.dealer-btn{
+        font-size: 1.7rem;
 
-margin-top:28px;
+    }
 
-width:100%;
 
-height:50px;
+    .menu-icon {
 
-}
+        width: 42px;
+
+        height: 42px;
+
+        font-size: 1.65rem;
+
+    }
+
+
+    /* ==================================
+       Full Width Mobile Sidebar
+    ================================== */
+
+    .nav-menu {
+
+        width: 100%;
+
+        max-width: 100%;
+
+        padding:
+            90px
+            24px
+            35px;
+
+        /*
+         * Completely outside viewport
+         * when closed.
+         */
+
+        transform: translateX(100%);
+
+    }
+
+
+    .nav-menu.active {
+
+        transform: translateX(0);
+
+    }
+
+
+    .dealer-btn-wrapper {
+
+        margin-top: 24px;
+
+    }
+
+
+    .dealer-btn {
+
+        height: 52px;
+
+        border-radius: 12px;
+
+        font-size: 15px;
+
+    }
 
 }

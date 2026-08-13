@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link, useNavigate } from "react-router-dom";
+
 import {
   FaBars,
   FaTimes,
@@ -9,18 +10,38 @@ import {
 import "../style/navbar.css";
 
 const Navbar = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
 
+  const [menuOpen, setMenuOpen] = useState(false);
   const [productDropdown, setProductDropdown] = useState(false);
+
+  const navigate = useNavigate();
 
   const closeMenu = () => {
     setMenuOpen(false);
     setProductDropdown(false);
   };
 
+  const handleDealerClick = () => {
+
+    closeMenu();
+
+    navigate("/distributor");
+
+    setTimeout(() => {
+        document.getElementById("distributor-form").scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+
+    }, 100);
+
+};
+
   return (
     <>
-      {/* Overlay */}
+      {/* ===========================
+          Overlay
+      =========================== */}
 
       {menuOpen && (
         <div
@@ -29,15 +50,30 @@ const Navbar = () => {
         />
       )}
 
+      {/* ===========================
+          Navbar
+      =========================== */}
+
       <header className="navbar">
+
         <div className="container">
+
+          {/* ===========================
+              Logo
+          =========================== */}
 
           <Link
             to="/"
             className="logo"
+            onClick={closeMenu}
           >
             Back<span>Win</span>
           </Link>
+
+
+          {/* ===========================
+              Navigation
+          =========================== */}
 
           <nav
             className={
@@ -46,12 +82,18 @@ const Navbar = () => {
                 : "nav-menu"
             }
           >
+
+            {/* Home */}
+
             <NavLink
               to="/"
               onClick={closeMenu}
             >
               Home
             </NavLink>
+
+
+            {/* About */}
 
             <NavLink
               to="/about"
@@ -60,7 +102,10 @@ const Navbar = () => {
               About
             </NavLink>
 
-            {/* Products */}
+
+            {/* ===========================
+                Products
+            =========================== */}
 
             <div className="products-dropdown">
 
@@ -71,16 +116,18 @@ const Navbar = () => {
                 Products
               </NavLink>
 
+
               <button
+                type="button"
                 className="dropdown-btn"
                 onClick={() =>
-                  setProductDropdown(
-                    !productDropdown
-                  )
+                  setProductDropdown(!productDropdown)
                 }
+                aria-label="Toggle product menu"
               >
                 <FaChevronDown />
               </button>
+
 
               <div
                 className={
@@ -89,6 +136,7 @@ const Navbar = () => {
                     : "dropdown-menu"
                 }
               >
+
                 <NavLink
                   to="/products/beer"
                   onClick={closeMenu}
@@ -128,12 +176,18 @@ const Navbar = () => {
 
             </div>
 
+
+            {/* Distributor */}
+
             <NavLink
               to="/distributor"
               onClick={closeMenu}
             >
               Distributor
             </NavLink>
+
+
+            {/* Contact */}
 
             <NavLink
               to="/contact"
@@ -142,30 +196,51 @@ const Navbar = () => {
               Contact
             </NavLink>
 
+
+            {/* ===========================
+                Become Dealer
+            =========================== */}
+
             <div className="dealer-btn-wrapper">
+
               <button
+                type="button"
                 className="dealer-btn"
-                onClick={() => {
-                  closeMenu();
-                  window.location.href = "/distributor#distributor-form";
-                }}
+                onClick={handleDealerClick}
               >
                 Become Dealer
               </button>
+
             </div>
 
           </nav>
 
-          <div
+
+          {/* ===========================
+              Mobile Menu
+          =========================== */}
+
+          <button
+            type="button"
             className="menu-icon"
-            onClick={() =>
-              setMenuOpen(!menuOpen)
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label={
+              menuOpen
+                ? "Close menu"
+                : "Open menu"
             }
           >
-            {menuOpen ? <FaTimes /> : <FaBars />}
-          </div>
+
+            {menuOpen ? (
+              <FaTimes />
+            ) : (
+              <FaBars />
+            )}
+
+          </button>
 
         </div>
+
       </header>
     </>
   );
