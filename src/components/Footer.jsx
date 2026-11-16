@@ -111,7 +111,7 @@ const Footer = () => {
         </p>
 
         <p>
-          Designed & Developed by <strong>KouSraTech</strong>
+          Designed & Developed by <strong>NextPaTech</strong>
         </p>
 
       </div>
